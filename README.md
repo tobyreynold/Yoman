@@ -1,22 +1,24 @@
 # Yoman 使用教程
 
 1.在官网下载最新nodejs，安装后node的版本和npm的版本才能达到Yoman要求的最低标准。
+
+
 2.进入yoman官网按照开始步骤来：
 （1）
-npm install -g yo bower grunt-cli gulp
+   npm install -g yo bower grunt-cli gulp
 （2）
-npm install -g generator-webapp
+   npm install -g generator-webapp
 （3）
-mkdir my-yo-project $ cd my-yo-project
-and then run:
-
-yo webapp
-这时候会报出一个错误，官方文档上没有给出解决方案，错误如下：
-priusdeMacBook-Pro:my-yo-project prius$ yo webapp
-module.js:338
+   mkdir my-yo-project $ cd my-yo-project
+  and then run:
+   yo webapp
+ 
+ 这时候会报出一个错误，官方文档上没有给出解决方案，错误如下：
+ XXXdeMacBook-Pro:my-yo-project prius$ yo webapp
+ module.js:338
     throw err;
           ^
-Error: Cannot find module 'underscore.string'
+ Error: Cannot find module 'underscore.string'
     at Function.Module._resolveFilename (module.js:336:15)
     at Function.Module._load (module.js:278:25)
     at Module.require (module.js:365:17)
@@ -29,6 +31,7 @@ Error: Cannot find module 'underscore.string'
     at Module.require (module.js:365:17)
     at require (module.js:384:17)
 （略微蛋疼）
+
 3. 于是google找到一个解决办法是：
 cd /usr/local/lib/node_modules/generator-webapp/
 npm install underscore.string
